@@ -1,0 +1,150 @@
+name: VoteRewards
+main: com.GeorgeV22.VoteRewards.Main
+version: 2.1.2-Beta
+description: Get rewards from vote
+author: GeorgeV22
+softdepend:
+- MVdWPlaceholderAPI
+- Votifier
+- NuVotifier
+- PlaceholderAPI
+commands:
+   vote:
+      usage: /<command>
+      description: Vote Links
+   rewards:
+      usage: /<command>
+      description: Rewards Command
+      aliases:
+      - rew
+      - reward
+      - votereward
+      - voter
+   voterewards:
+      usage: /<command>
+      description: Main Command
+      aliases:
+      - vr
+      - vrewards
+   votedebug:
+      usage: /<command>
+      description: Debug cmd
+      aliases:
+      - vrdebug
+   votetop:
+      usage: /<command>
+      description: See Top Voters
+      aliases:
+      - vtop
+      - votet
+   fakevote:
+      usage: /<command>
+      description: Send a fakevote
+      aliases:
+      - fkv
+      - fv
+      - fakev
+      - fvote
+   voteparty:
+      usage: /<command>
+      description: Vote Party main command
+      aliases:
+      - vp
+      - party
+      - votep
+      - vparty
+   votes:
+      usage: /<command>
+      description: Votes count
+permissions:
+   voterewards.vote:
+      description: Access to vote command
+      default: true
+   voterewards.rewards:
+      description: Access to rewards command
+      default: true
+   voterewards.votetop:
+      description: Access to votetop command
+      default: true
+   voterewards.fakevote:
+      description: Access to fakevote command
+      default: false
+   voterewards.updater:
+      description: Access to autoupdate message
+      default: op
+   voterewards.voteparty.crate:
+      description: Access to voteparty crate command
+      default: false
+   voterewards.voteparty.use:
+      description: Access to voteparty use command
+      default: false
+   voterewards.voteparty.start:
+      description: Access to voteparty start command
+      default: false
+   voterewards.voteparty.give:
+      description: Access to voteparty give command
+      default: false
+   voterewards.basic.reload:
+      description: Access to voterewards reload command
+      default: false
+   voterewards.basic.gui.admin:
+      description: Access to admin GUI
+      default: false
+   voterewards.basic.reset:
+      description: Access to voterewards reset command
+      default: false
+   voterewards.basic.clear:
+      description: Access to voterewards clear command
+      default: false
+   voterewards.basic:
+      description: Access to voterewards basic commands
+      default: false
+   voterewards.votes:
+      description: Access to voterewards votes command
+      default: false
+   voterewards.basic.*:
+      description: Access to voterewards basic commands
+      default: op
+      children:
+         voterewards.basic.all: true
+   voterewards.user:
+      description: Access to basic voterewards commands
+      default: false
+      children:
+         voterewards.vote: true
+         voterewards.rewards: true
+         voterewards.votetop: true
+         voterewards.voteparty.use: true
+         voterewards.votes: true
+   voterewards.voteparty.*:
+      description: Access to all voteparty commands
+      default: op
+      children:
+         voterewards.voteparty.use: true
+         voterewards.voteparty.start: true
+         voterewards.voteparty.give: true
+         voterewards.voteparty.crate: true
+   voterewards.basic.all:
+      description: Implies all basic voterewards permissions
+      default: op
+      children:
+         voterewards.basic: true
+         voterewards.basic.reset: true
+         voterewards.basic.clear: true
+         voterewards.basic.reload: true
+         voterewards.basic.update: true
+         voterewards.basic.gui.admin: true
+   voterewards.*:
+      default: false
+      description: Implies all voterewards permissions
+      children:
+         voterewards.all: true
+   voterewards.all:
+      default: false
+      description: Implies all voterewards permissions
+      children:
+         voterewards.voteparty.*: true
+         voterewards.basic.all: true
+         voterewards.user: true
+         voterewards.fakevote: true
+         voterewards.updater: true

@@ -1,0 +1,88 @@
+Options:
+   ConfigVersion: 1.6.4
+   Updater: true
+   FakeVote: false
+   Offline: true
+   VoteParty: true
+   PermVote: false
+   LuckyVote: false
+   Cumulative: false
+   ChatMessage: true
+   Title: false
+   Actionbar: true
+   Daily: false
+   Reminder:
+      Enabled: true
+      Seconds: 60
+   Metrics: true
+   MySQL: false
+   VoteTop:
+      Header: true
+      Footer: true
+      Top: 5
+   ChatMessageType: BROADCAST
+   Vote Goal:
+      enable: false
+      goal: 100
+      bars: 40
+Rewards:
+   services:
+      default:
+      - give %player% minecraft:nether_star
+      - eco give %player% 200
+      Minecraft-MP:
+      - give %player% minecraft:nether_star
+      - eco give %player% 200
+      - broadcast Thank you for voting at Minecraft-MP
+   cumulative:
+      '10':
+      - broadcast %player% Voted 10 times
+   daily:
+      '5':
+      - broadcast %player% voted in 5 sites and get 1000$
+      - eco give %player% 1000
+   lucky:
+      '10':
+      - broadcast %player% was lucky and get 1000$
+      - eco give %player% 1000
+   perm:
+      starter:
+      - give %player% minecraft:nether_star 50
+      - eco give %player% 5000
+      vip:
+      - give %player% minecraft:nether_star 100
+      - eco give %player% 10000
+VoteParty:
+   Votes: 2
+   Sound: true
+   Random Rewards: true
+   Participate: false
+   Chat Message: true
+   Crate:
+      enable: true
+      Sound: true
+      Cooldown: true
+      Secs: 5
+      Display Name: '&aVote Crate'
+      Lores:
+      - '&aPlace me to earn'
+      - '&asome cool rewards!'
+   Firework: true
+   Commands:
+   - eco give %player% 50
+   - eco give %player% 1000
+   - give %player% dirt 1
+MySQL:
+   IP: localhost
+   Port: 3306
+   Database: VoteRewards
+   User: root
+   Password: ''
+Sounds:
+   VotePartyStart: ENDERDRAGON_DEATH
+   CrateGive: CHICKEN_EGG_POP
+   CrateOpen: CHEST_OPEN
+   Vote: ORB_PICKUP
+Debug:
+   Events: false
+   Reminder: false

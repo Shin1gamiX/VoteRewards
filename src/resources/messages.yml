@@ -1,0 +1,52 @@
+ConfigVersion: 1.2
+Basics:
+   Reminder:
+   - '%player% don''t forget to vote! <3'
+   Rewards:
+   - '&b4 Coins and 200$'
+   Vote:
+   - '&7Link&e: &ahttp://example.com/&r'
+   - '&7Total Votes&e: &a%votes%'
+   Vote Rewards: '&7%player% &aThanks for vote on %servicename%'
+   VoteTop:
+      Body:
+      - '&e%top_players_name% &8> &e%top_player_votes%'
+      Header: '&8=== &6VoteTop &8==='
+      Footer: '&8=== &6VoteTop &8==='
+   Votes:
+      Sender:
+      - '&c === &3VoteRewards &c==='
+      - '&b       &a%votes%'
+      - '&c === &3VoteRewards &c==='
+      Target:
+      - '&c === &3VoteRewards &c==='
+      - '&b       &a%player%'
+      - '&b       &a%votes%'
+      - '&c === &3VoteRewards &c==='
+      Reminder:
+      - '&b%player% &cplease don''t forget to vote'
+Vote:
+   Title: This is a title %player% %service_name% %votes%
+   Subtitle: This is subtitle %player% %service_name% %votes%
+   Goal:
+   - '&aVote Goal: {goal}'
+   - '&aVote Goal in percentage: {percentage}'
+Actionbar: '&aThank you %player% for voting in %service_name%'
+VoteParty:
+   Claim: '&8[&3VoteRewards&8] &aYou have claimed %crates%!'
+   NothingToClaim: '&8[&3VoteRewards&8] &cYou don''t have crates to claim!'
+   Unclaim: '&8[&3VoteRewards&8] &7You have unclaimed crates!'
+   Need: '&8[&3VoteRewards&8] &7Votes needed for party: &f%votes%'
+   Give: '&8[&3VoteRewards&8] &7You just got %amount% VoteCrate'
+   Cooldown start: '&8[&3VoteRewards&8] &7A VoteParty will begin in %secs% seconds&3!'
+   Not Voted: '&8[&3VoteRewards&8] &cYou didn''t vote to be able to participate in this VoteParty!'
+   Chat: '&8[&3VoteRewards&8] &7Votes needed for party: &f%votes%'
+   Title: This is a title
+   Subtitle: This is a subtitle
+   Crate:
+      Open: '&8[&3VoteRewards&8] &7Your vote rewards have been applied!'
+      Give: '&8[&3VoteRewards&8] &7A reward crate has been added to your inventory!'
+Join Player:
+- '&bYour'
+- '&9Message'
+- '&8Here'
