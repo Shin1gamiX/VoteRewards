@@ -1,8 +1,9 @@
 name: VoteRewards
 main: com.GeorgeV22.VoteRewards.Main
-version: 2.1.2-Beta
+version: 2.1.3-Beta
 description: Get rewards from vote
 author: GeorgeV22
+site: GeorgeV22.com
 softdepend:
 - MVdWPlaceholderAPI
 - Votifier
