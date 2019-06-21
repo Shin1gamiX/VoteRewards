@@ -94,6 +94,7 @@ public class Main extends JavaPlugin implements Listener {
 	private boolean oldconfig = false;
 	private boolean oldmessages = false;
 
+	@Override
 	public void onEnable() {
 		try {
 			api = new API();
@@ -111,6 +112,7 @@ public class Main extends JavaPlugin implements Listener {
 		}
 	}
 
+	@Override
 	public void onDisable() {
 		if (MySQL()) {
 			try {
@@ -200,6 +202,7 @@ public class Main extends JavaPlugin implements Listener {
 										}
 									}
 								}
+								rs.close();
 							}
 
 						} catch (Exception e) {
@@ -283,6 +286,7 @@ public class Main extends JavaPlugin implements Listener {
 				}.runTaskLaterAsynchronously(this, 60);
 
 				new BukkitRunnable() {
+					@Override
 					public void run() {
 						try {
 							if (getConnection() == null || getConnection().isClosed()) {
