@@ -17,31 +17,31 @@ public class AdminGUI implements Listener {
 	private Main m = Main.getPlugin(Main.class);
 
 	public Inventory getInventory() {
-		Inventory inventory = Bukkit.createInventory(null, 27, "§9VoteRewards §cAdmin");
+		Inventory inventory = Bukkit.createInventory(null, 27, "Â§9VoteRewards Â§cAdmin");
 		ItemStack item1 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item1Meta = item1.getItemMeta();
-		item1Meta.setDisplayName("§8» §6§lOptions");
+		item1Meta.setDisplayName("Â§8Â» Â§6Â§lOptions");
 		item1.setItemMeta(item1Meta);
 
 		ItemStack item2 = new ItemStack(XMaterial.PAPER.parseMaterial());
 		ItemMeta item2Meta = item2.getItemMeta();
-		item2Meta.setDisplayName("§8» §6§lReload");
+		item2Meta.setDisplayName("Â§8Â» Â§6Â§lReload");
 		item2.setItemMeta(item2Meta);
 
 		ItemStack item3 = new ItemStack(XMaterial.STICKY_PISTON.parseMaterial());
 		ItemMeta item3Meta = item3.getItemMeta();
-		item3Meta.setDisplayName("§8» §6§lVote Party");
+		item3Meta.setDisplayName("Â§8Â» Â§6Â§lVote Party");
 		item3.setItemMeta(item3Meta);
 
 		ItemStack item4 = new ItemStack(XMaterial.CAKE.parseMaterial());
 		ItemMeta item4Meta = item4.getItemMeta();
 		String chatmessagetype = m.getConfig().getString("Options.ChatMessageType");
-		item4Meta.setDisplayName("§8» §6§lChat Message Type: §5" + chatmessagetype);
+		item4Meta.setDisplayName("Â§8Â» Â§6Â§lChat Message Type: Â§5" + chatmessagetype);
 		item4.setItemMeta(item4Meta);
 
 		ItemStack border = new ItemStack(XMaterial.BLACK_STAINED_GLASS_PANE.parseMaterial(), 1, (short) 15);
 		ItemMeta borderMeta = border.getItemMeta();
-		borderMeta.setDisplayName("§8 ");
+		borderMeta.setDisplayName("Â§8 ");
 		border.setItemMeta(borderMeta);
 
 		inventory.setItem(10, item1);
@@ -59,139 +59,139 @@ public class AdminGUI implements Listener {
 	}
 
 	private Inventory getOptionsInventory() {
-		Inventory inv = Bukkit.getServer().createInventory(null, 45, "§cAdmin - Options");
+		Inventory inv = Bukkit.getServer().createInventory(null, 45, "Â§cAdmin - Options");
 
 		ItemStack item1 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item1Meta = item1.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Updater"))
-			item1Meta.setDisplayName("§8» §6§lUpdater §e- §a§lON");
+			item1Meta.setDisplayName("Â§8Â» Â§6Â§lUpdater Â§e- Â§aÂ§lON");
 		else
-			item1Meta.setDisplayName("§8» §6§lUpdater §e- §c§lOFF");
+			item1Meta.setDisplayName("Â§8Â» Â§6Â§lUpdater Â§e- Â§cÂ§lOFF");
 		item1.setItemMeta(item1Meta);
 
 		ItemStack item2 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item2Meta = item2.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Offline"))
-			item2Meta.setDisplayName("§8» §6§lOffline §e- §a§lON");
+			item2Meta.setDisplayName("Â§8Â» Â§6Â§lOffline Â§e- Â§aÂ§lON");
 		else
-			item2Meta.setDisplayName("§8» §6§lOffline §e- §c§lOFF");
+			item2Meta.setDisplayName("Â§8Â» Â§6Â§lOffline Â§e- Â§cÂ§lOFF");
 		item2.setItemMeta(item2Meta);
 
 		ItemStack item3 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item3Meta = item3.getItemMeta();
 		if (m.getConfig().getBoolean("Options.FakeVote"))
-			item3Meta.setDisplayName("§8» §6§lFake Vote §e- §a§lON");
+			item3Meta.setDisplayName("Â§8Â» Â§6Â§lFake Vote Â§e- Â§aÂ§lON");
 		else
-			item3Meta.setDisplayName("§8» §6§lFake Vote §e- §c§lOFF");
+			item3Meta.setDisplayName("Â§8Â» Â§6Â§lFake Vote Â§e- Â§cÂ§lOFF");
 		item3.setItemMeta(item3Meta);
 
 		ItemStack item4 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item4Meta = item4.getItemMeta();
 		if (m.getConfig().getBoolean("Options.VoteParty"))
-			item4Meta.setDisplayName("§8» §6§lVote Party §e- §a§lON");
+			item4Meta.setDisplayName("Â§8Â» Â§6Â§lVote Party Â§e- Â§aÂ§lON");
 		else
-			item4Meta.setDisplayName("§8» §6§lVote Party §e- §c§lOFF");
+			item4Meta.setDisplayName("Â§8Â» Â§6Â§lVote Party Â§e- Â§cÂ§lOFF");
 		item4.setItemMeta(item4Meta);
 
 		ItemStack item5 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item5Meta = item5.getItemMeta();
 		if (m.getConfig().getBoolean("Options.PermVote"))
-			item5Meta.setDisplayName("§8» §6§lPerm Vote §e- §a§lON");
+			item5Meta.setDisplayName("Â§8Â» Â§6Â§lPerm Vote Â§e- Â§aÂ§lON");
 		else
-			item5Meta.setDisplayName("§8» §6§lPerm Vote §e- §c§lOFF");
+			item5Meta.setDisplayName("Â§8Â» Â§6Â§lPerm Vote Â§e- Â§cÂ§lOFF");
 		item5.setItemMeta(item5Meta);
 
 		ItemStack item6 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item6Meta = item6.getItemMeta();
 		if (m.getConfig().getBoolean("Options.LuckyVote"))
-			item6Meta.setDisplayName("§8» §6§lLucky Vote §e- §a§lON");
+			item6Meta.setDisplayName("Â§8Â» Â§6Â§lLucky Vote Â§e- Â§aÂ§lON");
 		else
-			item6Meta.setDisplayName("§8» §6§lLucky Vote §e- §c§lOFF");
+			item6Meta.setDisplayName("Â§8Â» Â§6Â§lLucky Vote Â§e- Â§cÂ§lOFF");
 		item6.setItemMeta(item6Meta);
 
 		ItemStack item7 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item7Meta = item7.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Cumulative"))
-			item7Meta.setDisplayName("§8» §6§lCumulative Vote §e- §a§lON");
+			item7Meta.setDisplayName("Â§8Â» Â§6Â§lCumulative Vote Â§e- Â§aÂ§lON");
 		else
-			item7Meta.setDisplayName("§8» §6§lCumulative Vote §e- §c§lOFF");
+			item7Meta.setDisplayName("Â§8Â» Â§6Â§lCumulative Vote Â§e- Â§cÂ§lOFF");
 		item7.setItemMeta(item7Meta);
 
 		ItemStack item8 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item8Meta = item8.getItemMeta();
 		if (m.getConfig().getBoolean("Options.ChatMessage"))
-			item8Meta.setDisplayName("§8» §6§lChat Message §e- §a§lON");
+			item8Meta.setDisplayName("Â§8Â» Â§6Â§lChat Message Â§e- Â§aÂ§lON");
 		else
-			item8Meta.setDisplayName("§8» §6§lChat Message §e- §c§lOFF");
+			item8Meta.setDisplayName("Â§8Â» Â§6Â§lChat Message Â§e- Â§cÂ§lOFF");
 		item8.setItemMeta(item8Meta);
 
 		ItemStack item9 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item9Meta = item9.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Title"))
-			item9Meta.setDisplayName("§8» §6§lTitle §e- §a§lON");
+			item9Meta.setDisplayName("Â§8Â» Â§6Â§lTitle Â§e- Â§aÂ§lON");
 		else
-			item9Meta.setDisplayName("§8» §6§lTitle §e- §c§lOFF");
+			item9Meta.setDisplayName("Â§8Â» Â§6Â§lTitle Â§e- Â§cÂ§lOFF");
 		item9.setItemMeta(item9Meta);
 
 		ItemStack item10 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item10Meta = item10.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Actionbar"))
-			item10Meta.setDisplayName("§8» §6§lActionbar §e- §a§lON");
+			item10Meta.setDisplayName("Â§8Â» Â§6Â§lActionbar Â§e- Â§aÂ§lON");
 		else
-			item10Meta.setDisplayName("§8» §6§lActionbar §e- §c§lOFF");
+			item10Meta.setDisplayName("Â§8Â» Â§6Â§lActionbar Â§e- Â§cÂ§lOFF");
 		item10.setItemMeta(item10Meta);
 
 		ItemStack item11 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item11Meta = item11.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Reminder.Enabled"))
-			item11Meta.setDisplayName("§8» §6§lReminder §e- §a§lON");
+			item11Meta.setDisplayName("Â§8Â» Â§6Â§lReminder Â§e- Â§aÂ§lON");
 		else
-			item11Meta.setDisplayName("§8» §6§lReminder §e- §c§lOFF");
+			item11Meta.setDisplayName("Â§8Â» Â§6Â§lReminder Â§e- Â§cÂ§lOFF");
 		item11.setItemMeta(item11Meta);
 
 		ItemStack item12 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item12Meta = item12.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Metrics"))
-			item12Meta.setDisplayName("§8» §6§lMetrics §e- §a§lON");
+			item12Meta.setDisplayName("Â§8Â» Â§6Â§lMetrics Â§e- Â§aÂ§lON");
 		else
-			item12Meta.setDisplayName("§8» §6§lMetrics §e- §c§lOFF");
+			item12Meta.setDisplayName("Â§8Â» Â§6Â§lMetrics Â§e- Â§cÂ§lOFF");
 		item12.setItemMeta(item12Meta);
 
 		ItemStack item13 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item13Meta = item13.getItemMeta();
 		if (m.getConfig().getBoolean("Options.MySQL"))
-			item13Meta.setDisplayName("§8» §6§lMySQL §e- §a§lON");
+			item13Meta.setDisplayName("Â§8Â» Â§6Â§lMySQL Â§e- Â§aÂ§lON");
 		else
-			item13Meta.setDisplayName("§8» §6§lMySQL §e- §c§lOFF");
+			item13Meta.setDisplayName("Â§8Â» Â§6Â§lMySQL Â§e- Â§cÂ§lOFF");
 		item13.setItemMeta(item13Meta);
 
 		ItemStack item14 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item14Meta = item14.getItemMeta();
 		if (m.getConfig().getBoolean("Options.VoteTop.Header") || m.getConfig().getBoolean("Options.VoteTop.Footer"))
-			item14Meta.setDisplayName("§8» §6§lVote Top §e- §a§lON");
+			item14Meta.setDisplayName("Â§8Â» Â§6Â§lVote Top Â§e- Â§aÂ§lON");
 		else
-			item14Meta.setDisplayName("§8» §6§lVote Top §e- §c§lOFF");
+			item14Meta.setDisplayName("Â§8Â» Â§6Â§lVote Top Â§e- Â§cÂ§lOFF");
 		item14.setItemMeta(item14Meta);
 
 		ItemStack item15 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item15Meta = item15.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Daily"))
-			item15Meta.setDisplayName("§8» §6§lDaily §e- §a§lON");
+			item15Meta.setDisplayName("Â§8Â» Â§6Â§lDaily Â§e- Â§aÂ§lON");
 		else
-			item15Meta.setDisplayName("§8» §6§lDaily §e- §c§lOFF");
+			item15Meta.setDisplayName("Â§8Â» Â§6Â§lDaily Â§e- Â§cÂ§lOFF");
 		item15.setItemMeta(item15Meta);
 
 		ItemStack item16 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item16Meta = item16.getItemMeta();
 		if (m.getConfig().getBoolean("Options.Vote Goal.enable"))
-			item16Meta.setDisplayName("§8» §6§lVote Goal §e- §a§lON");
+			item16Meta.setDisplayName("Â§8Â» Â§6Â§lVote Goal Â§e- Â§aÂ§lON");
 		else
-			item16Meta.setDisplayName("§8» §6§lVote Goal §e- §c§lOFF");
+			item16Meta.setDisplayName("Â§8Â» Â§6Â§lVote Goal Â§e- Â§cÂ§lOFF");
 		item16.setItemMeta(item16Meta);
 
 		ItemStack border = new ItemStack(XMaterial.BLACK_STAINED_GLASS_PANE.parseMaterial(), 1, (short) 15);
 		ItemMeta borderMeta = border.getItemMeta();
-		borderMeta.setDisplayName("§8 ");
+		borderMeta.setDisplayName("Â§8 ");
 		border.setItemMeta(borderMeta);
 
 		for (int i = 0; i <= 9; i++) {
@@ -223,75 +223,75 @@ public class AdminGUI implements Listener {
 	}
 
 	private Inventory getVotePartyInventory() {
-		Inventory inv = Bukkit.getServer().createInventory(null, 36, "§cAdmin - VoteParty Options");
+		Inventory inv = Bukkit.getServer().createInventory(null, 36, "Â§cAdmin - VoteParty Options");
 
 		ItemStack item1 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item1Meta = item1.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Sound"))
-			item1Meta.setDisplayName("§8» §6§lSound §e- §a§lON");
+			item1Meta.setDisplayName("Â§8Â» Â§6Â§lSound Â§e- Â§aÂ§lON");
 		else
-			item1Meta.setDisplayName("§8» §6§lSound §e- §c§lOFF");
+			item1Meta.setDisplayName("Â§8Â» Â§6Â§lSound Â§e- Â§cÂ§lOFF");
 		item1.setItemMeta(item1Meta);
 
 		ItemStack item2 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item2Meta = item2.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Random Rewards"))
-			item2Meta.setDisplayName("§8» §6§lRandom Rewards §e- §a§lON");
+			item2Meta.setDisplayName("Â§8Â» Â§6Â§lRandom Rewards Â§e- Â§aÂ§lON");
 		else
-			item2Meta.setDisplayName("§8» §6§lRandom Rewards §e- §c§lOFF");
+			item2Meta.setDisplayName("Â§8Â» Â§6Â§lRandom Rewards Â§e- Â§cÂ§lOFF");
 		item2.setItemMeta(item2Meta);
 
 		ItemStack item3 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item3Meta = item3.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Participate"))
-			item3Meta.setDisplayName("§8» §6§lParticipate §e- §a§lON");
+			item3Meta.setDisplayName("Â§8Â» Â§6Â§lParticipate Â§e- Â§aÂ§lON");
 		else
-			item3Meta.setDisplayName("§8» §6§lParticipate §e- §c§lOFF");
+			item3Meta.setDisplayName("Â§8Â» Â§6Â§lParticipate Â§e- Â§cÂ§lOFF");
 		item3.setItemMeta(item3Meta);
 
 		ItemStack item4 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item4Meta = item4.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Chat Message"))
-			item4Meta.setDisplayName("§8» §6§lChat Message §e- §a§lON");
+			item4Meta.setDisplayName("Â§8Â» Â§6Â§lChat Message Â§e- Â§aÂ§lON");
 		else
-			item4Meta.setDisplayName("§8» §6§lChat Message §e- §c§lOFF");
+			item4Meta.setDisplayName("Â§8Â» Â§6Â§lChat Message Â§e- Â§cÂ§lOFF");
 		item4.setItemMeta(item4Meta);
 
 		ItemStack item5 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item5Meta = item5.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Crate.enable"))
-			item5Meta.setDisplayName("§8» §6§lCrate §e- §a§lON");
+			item5Meta.setDisplayName("Â§8Â» Â§6Â§lCrate Â§e- Â§aÂ§lON");
 		else
-			item5Meta.setDisplayName("§8» §6§lCrate §e- §c§lOFF");
+			item5Meta.setDisplayName("Â§8Â» Â§6Â§lCrate Â§e- Â§cÂ§lOFF");
 		item5.setItemMeta(item5Meta);
 
 		ItemStack item6 = new ItemStack(XMaterial.BOOK.parseMaterial());
 		ItemMeta item6Meta = item6.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Firework"))
-			item6Meta.setDisplayName("§8» §6§lFirework §e- §a§lON");
+			item6Meta.setDisplayName("Â§8Â» Â§6Â§lFirework Â§e- Â§aÂ§lON");
 		else
-			item6Meta.setDisplayName("§8» §6§lFirework §e- §c§lOFF");
+			item6Meta.setDisplayName("Â§8Â» Â§6Â§lFirework Â§e- Â§cÂ§lOFF");
 		item6.setItemMeta(item6Meta);
 
 		ItemStack item7 = new ItemStack(XMaterial.STICKY_PISTON.parseMaterial());
 		ItemMeta item7Meta = item7.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Crate.Sound"))
-			item7Meta.setDisplayName("§8» §6§lCrate Sound §e- §a§lON");
+			item7Meta.setDisplayName("Â§8Â» Â§6Â§lCrate Sound Â§e- Â§aÂ§lON");
 		else
-			item7Meta.setDisplayName("§8» §6§lCrate Sound §e- §c§lOFF");
+			item7Meta.setDisplayName("Â§8Â» Â§6Â§lCrate Sound Â§e- Â§cÂ§lOFF");
 		item7.setItemMeta(item7Meta);
 
 		ItemStack item8 = new ItemStack(XMaterial.STICKY_PISTON.parseMaterial());
 		ItemMeta item8Meta = item8.getItemMeta();
 		if (m.getConfig().getBoolean("VoteParty.Crate.Cooldown"))
-			item8Meta.setDisplayName("§8» §6§lCrate Cooldown §e- §a§lON");
+			item8Meta.setDisplayName("Â§8Â» Â§6Â§lCrate Cooldown Â§e- Â§aÂ§lON");
 		else
-			item8Meta.setDisplayName("§8» §6§lCrate Cooldown §e- §c§lOFF");
+			item8Meta.setDisplayName("Â§8Â» Â§6Â§lCrate Cooldown Â§e- Â§cÂ§lOFF");
 		item8.setItemMeta(item8Meta);
 
 		ItemStack border = new ItemStack(XMaterial.BLACK_STAINED_GLASS_PANE.parseMaterial(), 1, (short) 15);
 		ItemMeta borderMeta = border.getItemMeta();
-		borderMeta.setDisplayName("§8 ");
+		borderMeta.setDisplayName("Â§8 ");
 		border.setItemMeta(borderMeta);
 
 		for (int i = 0; i <= 9; i++) {
@@ -316,7 +316,7 @@ public class AdminGUI implements Listener {
 
 	@EventHandler
 	public void onInventoryClick(InventoryClickEvent e) {
-		if (e.getInventory().getTitle().equals("§cAdmin - VoteParty Options")) {
+		if (e.getView().getTitle().equals("Â§cAdmin - VoteParty Options")) {
 			if ((e.getCurrentItem() == null) || (e.getCurrentItem().getType() == XMaterial.AIR.parseMaterial())) {
 				return;
 			}
@@ -365,7 +365,7 @@ public class AdminGUI implements Listener {
 			e.setCancelled(true);
 			return;
 		}
-		if (e.getInventory().getTitle().equals("§9VoteRewards §cAdmin")) {
+		if (e.getView().getTitle().equals("Â§9VoteRewards Â§cAdmin")) {
 			if ((e.getCurrentItem() == null) || (e.getCurrentItem().getType() == XMaterial.AIR.parseMaterial())) {
 				return;
 			}
@@ -400,7 +400,7 @@ public class AdminGUI implements Listener {
 			e.setCancelled(true);
 			return;
 		}
-		if (e.getInventory().getTitle().equals("§cAdmin - Options")) {
+		if (e.getView().getTitle().equals("Â§cAdmin - Options")) {
 			if ((e.getCurrentItem() == null) || (e.getCurrentItem().getType() == XMaterial.AIR.parseMaterial())) {
 				return;
 			}
